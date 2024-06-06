@@ -1,0 +1,12 @@
+select {
+    cursor: pointer;
+    padding: var(--padding-five);
+}
+
+select:focus {
+    outline: 2px solid #ff7500;
+}
+
+.products-h1 {
+    margin-left: 15px;
+}

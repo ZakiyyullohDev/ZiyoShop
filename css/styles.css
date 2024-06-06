@@ -1,0 +1,280 @@
+@font-face {
+    font-family: Judson;
+    src: url(/fonts/Judson-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barrio;
+    src: url(/fonts/Barrio/Barrio-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+:root {
+    --logo-color: #ff7500;
+    --padding-five: 5px 10px;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Ubuntu;
+    background-color: #fff;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head-top {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.head-ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.head-li {
+    margin-right: 50px;
+}
+
+.head-ul:last-child .head-li:nth-child(2) {
+    margin-right: 0;
+}
+
+.head-ul:first-child .head-li:nth-child(1) {
+    border-bottom: 2px solid #ff7500;
+}
+
+.head-li-a {
+    color: #000;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+.head-li-a:hover {
+    color: var(--logo-color);
+}
+
+.logo-img {
+    display: block;
+}
+
+.logo-a {
+    margin-right: 50px;
+    filter: drop-shadow(4px 4px 0px 2px #222);
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 8px 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-family: Poppins;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 3px outset #ff7500;
+    border-right: 0;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    width: 50px;
+    height: 39.2px;
+    padding: var(--padding-five);
+    border-radius: 5px;
+    font-family: Poppins;
+    border-top-left-radius: 0;
+    background-color: var(--logo-color);
+    border-bottom-left-radius: 0;
+    transition: all 0.3s ease;
+    border: 3px outset #ff7500;
+    border-left: 0;
+    cursor: pointer;
+}
+
+.main {
+    margin-bottom: 30px;
+}
+
+.products {
+    padding-top: 20px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-color: #333;
+    box-shadow: 10px 10px 10px #000000b0;
+}
+
+.products-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.products-h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    border-bottom: 2px solid #ff7500;
+}
+
+.products-ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+
+.products-ul:last-child {
+    margin-bottom: 0;
+}
+
+.products-li {
+    margin: 0;
+    padding: 0;
+}
+
+.products-box {
+    display: flex;
+    padding: 5px 20px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.products-title {
+    margin-bottom: 5px;
+}
+
+.products-img {
+    width: 220px;
+    height: 277px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.product-price {
+    margin-bottom: 5px;
+}
+
+.add-to-savat {
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #ff7500;
+    background-color: #ff7500;
+}
+
+.footer {
+    background-color: #333;
+}
+
+.footer-top {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    /* margin-bottom: 20px; */
+    justify-content: center;
+}
+
+.footer-ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.footer-li {
+    margin-right: 50px;
+}
+
+.footer-ul:last-child .footer-li:nth-child(2) {
+    margin-right: 0;
+}
+
+.footer-li-a {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+.footer-li-a:hover {
+    color: var(--logo-color);
+}
+
+.footer-logo-img {
+    width: 300px;
+    height: 103.6px;
+    object-fit: cover;
+}

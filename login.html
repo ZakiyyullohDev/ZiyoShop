@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish || ZiyoShop</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="icon" href="img/png/logo-no-background-cropped.png">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="head-top">
+                <ul class="head-ul">
+                    <li class="head-li">
+                        <a href="index.html" class="head-li-a">Bosh Sahifa</a>
+                    </li>
+                    <li class="head-li">
+                        <a href="pdoructs.html" class="head-li-a">Mahsulotlar</a>
+                    </li>
+                </ul>
+                <a class="logo-a" href="index.html">
+                    <img class="logo-img" src="img/png/logo-no-background(1).png" alt="logo" width="300" height="86.33">
+                </a>
+                <ul class="head-ul">
+                    <li class="head-li">
+                        <a href="basket.html" class="head-li-a">Savat</a>
+                    </li>
+                    <li class="head-li">
+                        <a href="index.html" class="head-li-a">Kirish</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <form class="login-form" id="loginForm">
+
+                <label class="usernameLabel" for="username">Ismingizni Kiritng:</label>
+                <input type="text" class="username-input" id="username" placeholder="Username">
+
+                <label class="lastnameLabel" for="lastname">Familiyangizni Kiriting:</label>
+                <input type="text" class="lastname-input" id="lastname" placeholder="Lastname">
+
+                <label class="emailLabel" for="email">E-mailingizni Kiritng:</label>
+                <input type="email" class="email-input" id="email" placeholder="E-mail">
+
+                <label class="passwordLabel" for="password">Parolni Kiriting:</label>
+                <input type="password" class="password-input" id="password" minlength="4" maxlength="18" placeholder="Password">
+                
+                <button class="submit-btn" id="submitBtn">Jo'natish</button>
+            </form>
+            <div class="user-info" id="userInfoWrapper">
+
+                <h3 class="userName" id="userNameHtml"></h3>
+                <h3 class="lastName" id="lastNameHtml"></h3>
+                <h3 class="email" id="emailHtml"></h3>
+                <h3 class="password" id="passwordHtml"></h3>
+                <button class="reset-user-info" id="resetUserInfoBtn">Ma'lumotlarni tozalash</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/login.js"></script>
+    
+</body>
+</html>
