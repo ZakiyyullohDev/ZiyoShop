@@ -20,9 +20,11 @@
 
 .basket-ul {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
     padding-bottom: 30px;
+    gap: 27.5px;
     justify-content: space-around;
 }
 
@@ -48,6 +50,11 @@
     margin-bottom: 5px;
 }
 
+.basket-product-title {
+    margin-bottom: 5px;
+    color: #000;
+}
+
 .basket-img {
     width: 220px;
     height: 277px;
@@ -61,8 +68,10 @@
 
 .remove-from-savat {
     color: #fff;
+    border: 1px solid #ff7500;
     padding: 5px 50px;
     border-radius: 10px;
+    cursor: pointer;
     text-decoration: none;
     background-color: #ff7500;
 }

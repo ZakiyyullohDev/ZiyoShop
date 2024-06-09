@@ -1,4 +1,4 @@
-const removeFromSavatBtns = document.querySelectorAll('.remove-from-savat');
+const addToSavatBtns = document.querySelectorAll('.add-to-savat');
 const productsArray = JSON.parse(localStorage.getItem('Product')) || [];
 const basketUl = document.getElementById('basketUl');
 
@@ -15,7 +15,7 @@ const getProductFromLocalStorage = () => {
         productsBox.classList.add('basket-box');
 
         const productTitle = document.createElement('h3');
-        productTitle.classList.add('basket-title');
+        productTitle.classList.add('basket-product-title');
         productTitle.textContent = product.name;
 
         const productImage = document.createElement('img');
@@ -32,8 +32,8 @@ const getProductFromLocalStorage = () => {
 
         removeFromSavat.addEventListener('click', () => {
             productsArray.splice(index, 1); 
-            addProductToLocalStorage();
-            productsLi.remove(); 
+            addProductToLocalStorage(); 
+            getProductFromLocalStorage();
         });
 
         productsBox.appendChild(productTitle);
@@ -46,3 +46,24 @@ const getProductFromLocalStorage = () => {
 };
 
 getProductFromLocalStorage();
+
+for (const addToSavatBtn of addToSavatBtns) {
+    addToSavatBtn.addEventListener('click', (e) => {
+        const productElement = e.target.parentElement.parentElement;
+        const imgElement = productElement.querySelector('img');
+        const imgSrc = imgElement ? imgElement.src : '';
+
+        const product = {
+            id: productElement.getAttribute('data-id'),
+            name: productElement.getAttribute('data-name'),
+            price: productElement.getAttribute('data-price'),
+            image: imgSrc
+        };
+
+        productsArray.push(product);
+        addProductToLocalStorage();
+        getProductFromLocalStorage();
+    });
+}
+
+console.log(productsArray);
