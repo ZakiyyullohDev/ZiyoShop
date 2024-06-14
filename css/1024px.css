@@ -1,0 +1,8 @@
+@media (min-width:1024px) {
+    .products-ul .maishiyTexnika-ul {
+        flex-wrap: wrap;
+    }
+    .products-box .maishiyTexnika-box {
+        width: 270px;
+    }
+}

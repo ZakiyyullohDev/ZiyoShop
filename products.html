@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahsulotlar || ZiyoShop</title>
+    <link rel="stylesheet" href="css/1024px.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/768px.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="icon" href="img/png/logo-no-background-cropped.png">
-    <script src="js/app.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -16,7 +17,7 @@
             <div class="head-top">
                 <ul class="head-ul">
                     <li class="head-li">
-                        <a href="index.html" class="head-li-a">Bosh Sahifa</a>
+                        <a href="index.html" class="head-li-a" title="Bosh Sahifa">Bosh Sahifa</a>
                     </li>
                     <li class="head-li">
                         <a href="products.html" class="head-li-a">Mahsulotlar</a>
@@ -45,7 +46,7 @@
                 <div class="products-top">
                     <select name="productSelector" id="productSelector">
                         <option value="Gaming">Gaming</option>
-                        <option value="Maishiy Texnika">Maishiy Texnika</option>
+                        <option value="Maishiy Texnika" id="maishiyTexnika">Maishiy Texnika</option>
                         <option value="Telefon va Noutbuklar">Telefon va Noutbuklar</option>
                     </select>
                     <h1 class="products-h1">Mahsulotlar</h1>
@@ -56,7 +57,7 @@
                             <h3 class="products-title">Red Magic 9 Pro Plus</h3>
                             <img class="products-img" src="img/products-img/red-magic-9-pro-plus.webp" alt="RedMagic9ProPlus" width="220" height="200">
                             <p class="product-price">$916.80</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                     <li class="products-li">
@@ -64,7 +65,7 @@
                             <h3 class="products-title">Cooler</h3>
                             <img class="products-img" src="img/products-img/cooler.png" alt="Cooler" width="220" height="200">
                             <p class="product-price">$15.88</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                     <li class="products-li">
@@ -72,7 +73,7 @@
                             <h3 class="products-title">Asus ROG Strix Scar</h3>
                             <img class="products-img" src="img/products-img/asus-rog-stric-scar.webp" alt="AsusRogStrixScar" width="220" height="200">
                             <p class="product-price">$3066.41</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                     <li class="products-li">
@@ -80,7 +81,7 @@
                             <h3 class="products-title">Xiaomi 14 Ultra</h3>
                             <img class="products-img" src="img/products-img/xiaomi_14_ultra_white.png" alt="Xiaomi14Ultra" width="220" height="200">
                             <p class="product-price">$849.00</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                 <!-- </ul>
@@ -90,7 +91,7 @@
                             <h3 class="products-title">Hyper X Quloqchini</h3>
                             <img class="products-img" src="img/products-img/hyperX.png" alt="hyperX" width="220" height="200">
                             <p class="product-price">$157.22</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                     <li class="products-li">
@@ -98,7 +99,7 @@
                             <h3 class="products-title">HyperX Quadcast Mikrofoni</h3>
                             <img class="products-img" src="img/products-img/hyperXQuadcast.png" alt="Cooler" width="220" height="200">
                             <p class="product-price">$274.17</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                     <li class="products-li">
@@ -106,15 +107,49 @@
                             <h3 class="products-title">Hyper X O'yin Stuli</h3>
                             <img class="products-img" src="img/products-img/hyperXChair.png" alt="AsusRogStrixScar" width="220" height="200">
                             <p class="product-price">$239.79</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                     <li class="products-li">
                         <div class="products-box" data-id="8" data-name="RTX 4090 Video Kartasi" data-price="1944.95">
                             <h3 class="products-title">RTX 4090 Video Kartasi</h3>
-                            <img class="products-img" src="img/products-img/RTX4090.png" alt="Xiaomi14Ultra" width="220" height="200">
+                            <img class="products-img" src="img/products-img/RTX4090.png" alt="Xiaomi14Ultra" width="220" height="200" title="RTX 4090 Video Kartasi">
                             <p class="product-price">$1,944.95</p>
-                            <button class="add-to-savat">Savatga Qo'shish</button>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="maishiyTexnika-ul" id="maishiyTexnikaUl" style="display: none;">
+                    <li class="maishiyTexnika-li">
+                        <div class="maishiyTexnika-box" data-id="1" data-name="Mikro To'lqinli Pech" data-price="63.43">
+                            <h3 class="maishiyTexnika-title">Mikro To'lqinli Pech</h3>
+                            <img class="maishiyTexnika-img" src="img/products-img/mikroto'lqinliPech.png" alt="RedMagic9ProPlus" width="220" height="200">
+                            <p class="product-price">$63.43</p>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
+                        </div>
+                    </li>
+                    <li class="maishiyTexnika-li">
+                        <div class="maishiyTexnika-box" data-id="1" data-name="Ventil Yator" data-price="43.26">
+                            <h3 class="maishiyTexnika-title">Ventil Yator</h3>
+                            <img class="maishiyTexnika-img" src="img/products-img/ventilyator.png" alt="RedMagic9ProPlus" width="220" height="200">
+                            <p class="product-price">$43.26</p>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
+                        </div>
+                    </li>
+                    <li class="maishiyTexnika-li">
+                        <div class="maishiyTexnika-box" data-id="1" data-name="Kir Yuvish Mashinasi" data-price="396.11">
+                            <h3 class="maishiyTexnika-title">Kir Yuvish Mashinasi</h3>
+                            <img class="maishiyTexnika-img" src="img/products-img/kiryuvgich.png" alt="RedMagic9ProPlus" width="220" height="200">
+                            <p class="product-price">$396.11</p>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
+                        </div>
+                    </li>
+                    <li class="maishiyTexnika-li">
+                        <div class="maishiyTexnika-box" data-id="1" data-name="Gaz Plitasi" data-price="165.91">
+                            <h3 class="maishiyTexnika-title">Gaz Plitasi</h3>
+                            <img class="maishiyTexnika-img" src="img/products-img/gazplita.png" alt="RedMagic9ProPlus" width="220" height="200">
+                            <p class="product-price">$165.91</p>
+                            <button class="add-to-savat" id="addToSavat">Savatga Qo'shish</button>
                         </div>
                     </li>
                 </ul>
@@ -144,11 +179,12 @@
                     <li class="footer-li">
                         <a href="login.html" class="footer-li-a">Kirish</a>
                     </li>
-                </ul>            </div>
+                </ul>
+            </div>
         </div>
     </footer>
     
-    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
 
 </body>
 </html>

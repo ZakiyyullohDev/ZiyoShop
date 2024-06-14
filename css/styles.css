@@ -184,10 +184,12 @@ img {
 }
 
 .products-ul {
+    gap: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    list-style-type: none;
     margin-bottom: 30px;
+    list-style-type: none;
     justify-content: space-around;
 }
 
@@ -211,6 +213,7 @@ img {
 
 .products-title {
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .products-img {
@@ -221,6 +224,48 @@ img {
 }
 
 .product-price {
+    margin-bottom: 5px;
+}
+
+.maishiyTexnika-ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+
+.maishiyTexnika-ul:last-child {
+    margin-bottom: 0;
+}
+
+.maishiyTexnika-li {
+    margin: 0;
+    padding: 0;
+}
+
+.maishiyTexnika-box {
+    display: flex;
+    padding: 5px 20px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.maishiyTexnika-title {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.maishiyTexnika-img {
+    width: 220px;
+    height: 277px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.maishiyTexnika-price {
     margin-bottom: 5px;
 }
 
