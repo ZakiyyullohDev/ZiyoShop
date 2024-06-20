@@ -1,6 +1,6 @@
 const basketProductsArray = [];
+const newProducts = JSON.parse(localStorage.getItem('newProducts')) || [];
 const maishiyTexnikaUl = document.getElementById('maishiyTexnikaUl');
-const newProducts = JSON.parse(localStorage.getItem('newProducts'));
 const maishiyTexnika = document.getElementById('maishiyTexnika');
 const addToSavatBtns = document.querySelectorAll('#addToSavat');
 const productsUl = document.getElementById('productsUl');
