@@ -69,3 +69,18 @@ h3 {
     cursor: pointer;
     padding: 7px 86px;
 }
+
+.inputImageLabel {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0;
+}
+
+.userImg {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid tomato;
+}
