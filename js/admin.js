@@ -8,23 +8,20 @@ const addProduct = document.getElementById('addProduct');
 const productImageInput = document.getElementById('imageInput');
 const productImageElement = document.createElement('img');
 
-const newProductsList = [];
+const newProductsList = JSON.parse(localStorage.getItem('newProducts')) || [];
 
 const addProductToLocalStorage = () => {
     localStorage.setItem('newProducts', JSON.stringify(newProductsList));
 }
 
 productImageInput.onchange = () => {
-    const imageFile = productImageInput.files[0];
-    if (imageFile) {
-        const imageUrl = URL.createObjectURL(imageFile);
-        productImageElement.src = imageUrl;
-        productImageElement.classList.add('new-product-image');
-        productImageElement.setAttribute('width', '220px');
-        productImageElement.setAttribute('height', '200px');
-        imageUploadWrapper.appendChild(productImageElement);
-        uploadedImageText.style.display = 'block';
-    }
+    const imageUrl = URL.createObjectURL(productImageInput.files[0]);
+    productImageElement.src = imageUrl;
+    productImageElement.classList.add('new-product-image');
+    productImageElement.setAttribute('width', '220px');
+    productImageElement.setAttribute('height', '200px');
+    imageUploadWrapper.appendChild(productImageElement);
+    uploadedImageText.style.display = 'block';
 }
 
 addProduct.addEventListener('click', () => {

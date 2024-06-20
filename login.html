@@ -19,7 +19,7 @@
                         <a href="index.html" class="head-li-a">Bosh Sahifa</a>
                     </li>
                     <li class="head-li">
-                        <a href="pdoructs.html" class="head-li-a">Mahsulotlar</a>
+                        <a href="products.html" class="head-li-a">Mahsulotlar</a>
                     </li>
                 </ul>
                 <a class="logo-a" href="index.html">
@@ -57,12 +57,18 @@
                 <button class="submit-btn" id="submitBtn">Jo'natish</button>
             </form>
             <div class="user-info" id="userInfoWrapper">
+                <label class="inputImageLabel" for="inputImage">
+                    <img id="userImg" class="userImg" src="img/png/user-icon-2.png" alt="userIcon" width="100" height="100">
+                </label>
+                <input type="file" id="inputImage" accept="image/png, image/jpg, image/jpeg, image/webp" style="display: none;">
 
                 <h3 class="userName" id="userNameHtml"></h3>
                 <h3 class="lastName" id="lastNameHtml"></h3>
                 <h3 class="email" id="emailHtml"></h3>
                 <h3 class="password" id="passwordHtml"></h3>
-                <button class="reset-user-info" id="resetUserInfoBtn">Ma'lumotlarni tozalash</button>
+
+                <button class="reset-user-info" id="resetUserInfoBtn">Ma'lumotlarni tozalash</button>   
+
             </div>
         </div>
     </main>

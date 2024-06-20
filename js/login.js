@@ -1,10 +1,12 @@
 const email = document.getElementById('email');
+const userImg = document.getElementById('userImg');
 const username = document.getElementById('username');
 const lastname = document.getElementById('lastname');
 const password = document.getElementById('password');
 const submitBtn = document.getElementById('submitBtn');
 const loginForm = document.getElementById('loginForm');
 const emailHtml = document.getElementById('emailHtml');
+const inputImage = document.getElementById('inputImage');
 const userNameHtml = document.getElementById('userNameHtml');
 const lastNameHtml = document.getElementById('lastNameHtml');
 const passwordHtml = document.getElementById('passwordHtml');
@@ -13,6 +15,8 @@ const resetUserInfoBtn = document.getElementById('resetUserInfoBtn');
 
 resetUserInfoBtn.addEventListener('click', ()=> {
     localStorage.removeItem('UserInfo')
+    loginForm.style.display = 'flex';
+    userInfoWrapper.style.display = 'none';
 })
 
 let userInfo = JSON.parse(localStorage.getItem('UserInfo')) || [];
@@ -58,3 +62,15 @@ submitBtn.addEventListener('click', (e) => {
 });
 
 displayUserInfo();
+
+inputImage.onchange = () => {
+    const imageFile = inputImage.files[0];
+    if (imageFile) {
+        const imageUrl = URL.createObjectURL(imageFile);
+        userImg.src = imageUrl;
+        userImg.classList.add('userImg');
+        userImg.setAttribute('width', '220px');
+        userImg.setAttribute('height', '200px');
+        console.log(imageUrl); 
+    }
+}
